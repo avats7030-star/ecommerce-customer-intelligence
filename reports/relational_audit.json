@@ -1,0 +1,87 @@
+{
+  "customers": {
+    "total_records": 99441,
+    "unique_customer_ids (order session key)": 99441,
+    "unique_customer_unique_ids (actual human)": 96096,
+    "repeat_customers_count": 2997,
+    "repeat_customer_pct": 3.12,
+    "max_orders_by_single_customer": 17
+  },
+  "orders": {
+    "total_records": 99441,
+    "unique_order_ids": 99441,
+    "date_range": {
+      "earliest_purchase": "2016-09-04 21:15:19",
+      "latest_purchase": "2018-10-17 17:30:18"
+    },
+    "order_status_distribution": {
+      "delivered": 96478,
+      "invoiced": 314,
+      "shipped": 1107,
+      "processing": 301,
+      "unavailable": 609,
+      "canceled": 625,
+      "created": 5,
+      "approved": 2
+    },
+    "foreign_key_match_with_customers": {
+      "orders_with_valid_customer_id": 99441,
+      "unmatched_customer_ids": 0
+    }
+  },
+  "order_items": {
+    "total_records": 112650,
+    "unique_orders_represented": 98666,
+    "orders_in_orders_table_without_items": 775,
+    "unique_products_sold": 32951,
+    "unique_sellers_represented": 3095,
+    "max_items_in_single_order": 21,
+    "products_in_items_not_in_products_table": 0,
+    "sellers_in_items_not_in_sellers_table": 0
+  },
+  "order_payments": {
+    "total_records": 103886,
+    "unique_orders_represented": 99440,
+    "orders_in_orders_table_without_payments": 1,
+    "max_payment_rows_per_order": 29,
+    "payment_type_distribution": {
+      "credit_card": 76795,
+      "boleto": 19784,
+      "voucher": 5775,
+      "debit_card": 1529,
+      "not_defined": 3
+    }
+  },
+  "order_reviews": {
+    "total_records": 99224,
+    "unique_orders_represented": 98673,
+    "orders_without_reviews": 768,
+    "max_reviews_per_order": 3,
+    "review_score_distribution": {
+      "4": 19142,
+      "5": 57328,
+      "1": 11424,
+      "3": 8179,
+      "2": 3151
+    }
+  },
+  "products": {
+    "total_records": 32951,
+    "unique_products": 32951,
+    "products_missing_category": 610,
+    "unique_portuguese_categories": 73,
+    "portuguese_categories_missing_translation": [
+      "pc_gamer",
+      "portateis_cozinha_e_preparadores_de_alimentos"
+    ]
+  },
+  "sellers": {
+    "total_records": 3095,
+    "unique_sellers": 3095
+  },
+  "geolocation": {
+    "total_records": 1000163,
+    "unique_zip_prefixes": 19015,
+    "duplicate_zip_warning": "1,000,163 rows represent only 19,015 zip prefixes (many lat/lng per zip code)"
+  }
+}

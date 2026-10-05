@@ -1,0 +1,47 @@
+{
+  "champion_model": "Logistic Regression",
+  "metrics": {
+    "Model": "Logistic Regression",
+    "Accuracy": 0.5969,
+    "Precision": 0.0531,
+    "Recall": 0.5696,
+    "F1_Score": 0.0971,
+    "ROC_AUC": 0.611,
+    "PR_AUC": 0.0601,
+    "True_Negatives": 7167,
+    "False_Positives": 4819,
+    "False_Negatives": 204,
+    "True_Positives": 270
+  },
+  "feature_names": {
+    "numerical": [
+      "spend_order1",
+      "items_count_order1",
+      "unique_products_order1",
+      "freight_value_order1",
+      "freight_ratio_order1",
+      "installments_order1",
+      "payment_splits_order1",
+      "delivery_days_order1",
+      "delivery_delay_days_order1",
+      "is_delayed_order1",
+      "review_score_order1",
+      "has_comment_title_order1",
+      "has_comment_message_order1",
+      "purchase_hour_order1"
+    ],
+    "categorical": [
+      "payment_type_order1",
+      "customer_state_order1",
+      "category_order1",
+      "purchase_dow_order1"
+    ]
+  },
+  "train_samples": 49839,
+  "test_samples": 12460,
+  "target_variable": "repeat_purchase",
+  "class_distribution_test": {
+    "positive": 474,
+    "negative": 11986
+  }
+}

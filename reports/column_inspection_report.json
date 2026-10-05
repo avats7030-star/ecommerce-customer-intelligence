@@ -1,0 +1,585 @@
+[
+  {
+    "file": "olist_customers_dataset.csv",
+    "rows": 99441,
+    "cols": 5,
+    "columns": [
+      {
+        "column": "customer_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "b2b6027bc5c5109e529d4dc6358b12c3",
+          "4f2d8ab171c80ec8364f7c12e35b23ad",
+          "18955e83d337fd6b2def6b18a428ac77"
+        ]
+      },
+      {
+        "column": "customer_unique_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "345ecd01c38d18a9036ed96c73b8d066",
+          "861eff4711a542e4b93843c6dd7febb0",
+          "060e732b5b29e8181a18229c7b0b2b5e"
+        ]
+      },
+      {
+        "column": "customer_zip_code_prefix",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "01151",
+          "08775",
+          "14409"
+        ]
+      },
+      {
+        "column": "customer_city",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "sao paulo",
+          "campinas",
+          "franca"
+        ]
+      },
+      {
+        "column": "customer_state",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "RJ",
+          "PR",
+          "MG"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "olist_orders_dataset.csv",
+    "rows": 99441,
+    "cols": 8,
+    "columns": [
+      {
+        "column": "order_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "53cdb2fc8bc7dce0b6741e2150273451",
+          "47770eb9100c2d0c44946d9cf07ec65d",
+          "949d5b44dbf5de918fe9c16f97b45f8a"
+        ]
+      },
+      {
+        "column": "customer_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "41ce2a54c0b03bf3443c3d931a367089",
+          "f88197465ea7920adcdbec7375364d82",
+          "8ab97904e6daea8866dbdbc4fb7aad2c"
+        ]
+      },
+      {
+        "column": "order_status",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "delivered",
+          "unavailable",
+          "processing"
+        ]
+      },
+      {
+        "column": "order_purchase_timestamp",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "2017-11-18 19:28:06",
+          "2018-02-13 21:18:39",
+          "2018-08-08 08:38:49"
+        ]
+      },
+      {
+        "column": "order_approved_at",
+        "null_count": 160,
+        "null_pct": 0.161,
+        "samples": [
+          "2018-02-13 22:20:29",
+          "2017-11-18 19:45:59",
+          "2018-07-26 03:24:27"
+        ]
+      },
+      {
+        "column": "order_delivered_carrier_date",
+        "null_count": 1783,
+        "null_pct": 1.793,
+        "samples": [
+          "2018-08-08 13:50:00",
+          "2017-10-04 19:55:00",
+          "2018-07-26 14:31:00"
+        ]
+      },
+      {
+        "column": "order_delivered_customer_date",
+        "null_count": 2965,
+        "null_pct": 2.982,
+        "samples": [
+          "2018-08-17 18:06:29",
+          "2018-08-07 15:27:45",
+          "2018-02-16 18:17:02"
+        ]
+      },
+      {
+        "column": "order_estimated_delivery_date",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "2018-09-04 00:00:00",
+          "2017-10-18 00:00:00",
+          "2017-12-15 00:00:00"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "olist_order_items_dataset.csv",
+    "rows": 112650,
+    "cols": 7,
+    "columns": [
+      {
+        "column": "order_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "00042b26cf59d7ce69dfabb4e55b4fd9",
+          "00018f77f2f0320c557190d7a144bdd3",
+          "000229ec398224ef6ca0657da4fc703e"
+        ]
+      },
+      {
+        "column": "order_item_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "3",
+          "1",
+          "5"
+        ]
+      },
+      {
+        "column": "product_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "e5f2d52b802189ee658865ca93d83a8f",
+          "ac6c3623068f30de03045865e4e10089",
+          "c777355d18b72b67abbeef9df44fd0fd"
+        ]
+      },
+      {
+        "column": "seller_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "5b51032eddd242adc84c38acab88f23d",
+          "48436dade18ac8b2bce089ec2a041202",
+          "df560393f3a51e74553ab94004ba5c87"
+        ]
+      },
+      {
+        "column": "shipping_limit_date",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "2017-09-19 09:45:35",
+          "2018-08-15 10:10:18",
+          "2017-02-13 13:57:51"
+        ]
+      },
+      {
+        "column": "price",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "12.99",
+          "239.90",
+          "199.90"
+        ]
+      },
+      {
+        "column": "freight_value",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "18.14",
+          "17.87",
+          "12.79"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "olist_order_payments_dataset.csv",
+    "rows": 103886,
+    "cols": 5,
+    "columns": [
+      {
+        "column": "order_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "25e8ea4e93396b6fa0d3dd708e76c1bd",
+          "ba78997921bbcdc1373bb41e913ab953",
+          "42fdf880ba16b47b59251dd489d4441a"
+        ]
+      },
+      {
+        "column": "payment_sequential",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "3",
+          "1",
+          "5"
+        ]
+      },
+      {
+        "column": "payment_type",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "boleto",
+          "voucher",
+          "debit_card"
+        ]
+      },
+      {
+        "column": "payment_installments",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "3",
+          "1",
+          "8"
+        ]
+      },
+      {
+        "column": "payment_value",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "128.45",
+          "107.78",
+          "99.33"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "olist_order_reviews_dataset.csv",
+    "rows": 99224,
+    "cols": 7,
+    "columns": [
+      {
+        "column": "review_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "f7c4243c7fe1938f181bec41a392bdeb",
+          "80e641a11e56f04c1ad469d5645fdfde",
+          "228ce5500dc1d8e020d8d1322874b6f0"
+        ]
+      },
+      {
+        "column": "order_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "8e6bfb81e283fa7e4f11123a3fb894f1",
+          "658677c97b385a9be170737859d3511b",
+          "f9e4b658b201a9f2ecdecbb34bed034b"
+        ]
+      },
+      {
+        "column": "review_score",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "3",
+          "1",
+          "5"
+        ]
+      },
+      {
+        "column": "review_comment_title",
+        "null_count": 87658,
+        "null_pct": 88.344,
+        "samples": [
+          "Muito bom.",
+          "N\u00e3o chegou meu produto",
+          "Super recomendo"
+        ]
+      },
+      {
+        "column": "review_comment_message",
+        "null_count": 58274,
+        "null_pct": 58.73,
+        "samples": [
+          "Recebi bem antes do prazo estipulado.",
+          "Vendedor confi\u00e1vel, produto ok e entrega antes do prazo.",
+          "Mas um pouco ,travando...pelo valor ta Boa."
+        ]
+      },
+      {
+        "column": "review_creation_date",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "2018-03-01 00:00:00",
+          "2018-02-17 00:00:00",
+          "2018-03-10 00:00:00"
+        ]
+      },
+      {
+        "column": "review_answer_timestamp",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "2018-01-18 21:46:59",
+          "2018-03-02 10:26:53",
+          "2018-03-11 03:05:13"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "olist_products_dataset.csv",
+    "rows": 32951,
+    "cols": 9,
+    "columns": [
+      {
+        "column": "product_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "9dc1a7de274444849c219cff195d0b71",
+          "1e9e8ef04dbcff4541ed26657ea517e5",
+          "96bd76ec8810374ed1b65e291975717f"
+        ]
+      },
+      {
+        "column": "product_category_name",
+        "null_count": 610,
+        "null_pct": 1.851,
+        "samples": [
+          "esporte_lazer",
+          "bebes",
+          "artes"
+        ]
+      },
+      {
+        "column": "product_name_lenght",
+        "null_count": 610,
+        "null_pct": 1.851,
+        "samples": [
+          "44",
+          "46",
+          "40"
+        ]
+      },
+      {
+        "column": "product_description_lenght",
+        "null_count": 610,
+        "null_pct": 1.851,
+        "samples": [
+          "287",
+          "276",
+          "402"
+        ]
+      },
+      {
+        "column": "product_photos_qty",
+        "null_count": 610,
+        "null_pct": 1.851,
+        "samples": [
+          "3",
+          "1",
+          "5"
+        ]
+      },
+      {
+        "column": "product_weight_g",
+        "null_count": 2,
+        "null_pct": 0.006,
+        "samples": [
+          "225",
+          "625",
+          "1000"
+        ]
+      },
+      {
+        "column": "product_length_cm",
+        "null_count": 2,
+        "null_pct": 0.006,
+        "samples": [
+          "16",
+          "18",
+          "20"
+        ]
+      },
+      {
+        "column": "product_height_cm",
+        "null_count": 2,
+        "null_pct": 0.006,
+        "samples": [
+          "18",
+          "10",
+          "4"
+        ]
+      },
+      {
+        "column": "product_width_cm",
+        "null_count": 2,
+        "null_pct": 0.006,
+        "samples": [
+          "14",
+          "15",
+          "20"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "olist_sellers_dataset.csv",
+    "rows": 3095,
+    "cols": 4,
+    "columns": [
+      {
+        "column": "seller_id",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "c0f3eea2e14555b6faeea3dd58c1b1c3",
+          "d1b65fc7debc3361ea86b5f14c68d2e2",
+          "ce3ad9de960102d0677a81f5d0bb7b2d"
+        ]
+      },
+      {
+        "column": "seller_zip_code_prefix",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "12914",
+          "20031",
+          "04195"
+        ]
+      },
+      {
+        "column": "seller_city",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "sao paulo",
+          "rio de janeiro",
+          "mogi guacu"
+        ]
+      },
+      {
+        "column": "seller_state",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "RJ",
+          "PR",
+          "GO"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "olist_geolocation_dataset.csv",
+    "rows": 1000163,
+    "cols": 5,
+    "columns": [
+      {
+        "column": "geolocation_zip_code_prefix",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "01035",
+          "01046",
+          "01041"
+        ]
+      },
+      {
+        "column": "geolocation_lat",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "-23.5443921648681",
+          "-23.546081127035535",
+          "-23.541577961711493"
+        ]
+      },
+      {
+        "column": "geolocation_lng",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "-46.64482029837157",
+          "-46.63929204800168",
+          "-46.64295148361138"
+        ]
+      },
+      {
+        "column": "geolocation_city",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "sao paulo",
+          "s\u00e3o paulo",
+          "sao bernardo do campo"
+        ]
+      },
+      {
+        "column": "geolocation_state",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "AC",
+          "RJ",
+          "RN"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "product_category_name_translation.csv",
+    "rows": 71,
+    "cols": 2,
+    "columns": [
+      {
+        "column": "product_category_name",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "moveis_decoracao",
+          "informatica_acessorios",
+          "beleza_saude"
+        ]
+      },
+      {
+        "column": "product_category_name_english",
+        "null_count": 0,
+        "null_pct": 0.0,
+        "samples": [
+          "health_beauty",
+          "bed_bath_table",
+          "computers_accessories"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,117 @@
+{
+  "total_analyzed_customers": 93358,
+  "high_value_customers_count": 18668,
+  "frequent_customers_count": 2801,
+  "at_risk_customers_count": 8318,
+  "inactive_customers_count": 20895,
+  "segments": [
+    {
+      "customer_segment": "At Risk",
+      "customer_count": 14457,
+      "total_revenue": 4421065.54,
+      "avg_order_value": 299.32830001613985,
+      "avg_recency_days": 391.8857731444655,
+      "avg_frequency": 1.0507020820363837,
+      "avg_spend_per_customer": 305.8079504738189,
+      "avg_review_score": 4.129647704034207,
+      "customer_share_pct": 15.49,
+      "revenue_share_pct": 28.67
+    },
+    {
+      "customer_segment": "Potential Loyalists",
+      "customer_count": 14405,
+      "total_revenue": 4353353.66,
+      "avg_order_value": 302.2112919125304,
+      "avg_recency_days": 91.88413587665676,
+      "avg_frequency": 1.0,
+      "avg_spend_per_customer": 302.2112919125304,
+      "avg_review_score": 4.131871202067472,
+      "customer_share_pct": 15.43,
+      "revenue_share_pct": 28.23
+    },
+    {
+      "customer_segment": "Hibernating",
+      "customer_count": 29202,
+      "total_revenue": 3548847.72,
+      "avg_order_value": 121.5275570166427,
+      "avg_recency_days": 257.2011233248864,
+      "avg_frequency": 1.0,
+      "avg_spend_per_customer": 121.5275570166427,
+      "avg_review_score": 4.067844571744081,
+      "customer_share_pct": 31.28,
+      "revenue_share_pct": 23.01
+    },
+    {
+      "customer_segment": "Lost",
+      "customer_count": 11431,
+      "total_revenue": 828687.14,
+      "avg_order_value": 72.49471962208031,
+      "avg_recency_days": 473.4696093884159,
+      "avg_frequency": 1.0,
+      "avg_spend_per_customer": 72.49471962208031,
+      "avg_review_score": 4.23051175900643,
+      "customer_share_pct": 12.24,
+      "revenue_share_pct": 5.37
+    },
+    {
+      "customer_segment": "Promising",
+      "customer_count": 10849,
+      "total_revenue": 793709.13,
+      "avg_order_value": 73.15965803299844,
+      "avg_recency_days": 135.60733595091543,
+      "avg_frequency": 1.0,
+      "avg_spend_per_customer": 73.15965803299844,
+      "avg_review_score": 4.162685185185185,
+      "customer_share_pct": 11.62,
+      "revenue_share_pct": 5.15
+    },
+    {
+      "customer_segment": "New Customers",
+      "customer_count": 10886,
+      "total_revenue": 791437.14,
+      "avg_order_value": 72.70229101598383,
+      "avg_recency_days": 45.1916467442893,
+      "avg_frequency": 1.0,
+      "avg_spend_per_customer": 72.70229101598383,
+      "avg_review_score": 4.34449672479011,
+      "customer_share_pct": 11.66,
+      "revenue_share_pct": 5.13
+    },
+    {
+      "customer_segment": "Champions",
+      "customer_count": 985,
+      "total_revenue": 366939.31,
+      "avg_order_value": 171.78630036258158,
+      "avg_recency_days": 88.87246104765933,
+      "avg_frequency": 2.181725888324873,
+      "avg_spend_per_customer": 372.52721827411165,
+      "avg_review_score": 4.284163279132791,
+      "customer_share_pct": 1.06,
+      "revenue_share_pct": 2.38
+    },
+    {
+      "customer_segment": "Loyal Customers",
+      "customer_count": 820,
+      "total_revenue": 204646.17,
+      "avg_order_value": 119.8806377855207,
+      "avg_recency_days": 183.61466272865854,
+      "avg_frequency": 2.071951219512195,
+      "avg_spend_per_customer": 249.56850000000003,
+      "avg_review_score": 4.101073077967944,
+      "customer_share_pct": 0.88,
+      "revenue_share_pct": 1.33
+    },
+    {
+      "customer_segment": "Can't Lose Them",
+      "customer_count": 323,
+      "total_revenue": 113775.96,
+      "avg_order_value": 172.58704850361198,
+      "avg_recency_days": 462.75966087604627,
+      "avg_frequency": 2.065015479876161,
+      "avg_spend_per_customer": 352.2475541795666,
+      "avg_review_score": 4.14751552795031,
+      "customer_share_pct": 0.35,
+      "revenue_share_pct": 0.74
+    }
+  ]
+}
