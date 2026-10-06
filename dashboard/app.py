@@ -373,6 +373,381 @@ st.markdown("""
       color: #0f172a;
   }
 
+  /* Primary Button Styling */
+  div[data-testid="stButton"] button[kind="primary"],
+  div[data-testid="stButton"] button[data-testid="stBaseButton-primary"] {
+      background: #0078d4 !important;
+      border: 1px solid #005a9e !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      font-size: 0.82rem !important;
+      letter-spacing: 0.02em !important;
+      box-shadow: 0 2px 4px rgba(0, 120, 212, 0.25) !important;
+  }
+  div[data-testid="stButton"] button[kind="primary"]:hover,
+  div[data-testid="stButton"] button[data-testid="stBaseButton-primary"]:hover {
+      background: #106ebe !important;
+      border-color: #004578 !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 8px rgba(0, 120, 212, 0.35) !important;
+  }
+
+  /* Sliders: Replace harsh red with brand indigo/blue */
+  div[data-testid="stSlider"] [data-baseweb="slider"] div[role="slider"] {
+      background-color: #0078d4 !important;
+      border: 2px solid #ffffff !important;
+      box-shadow: 0 1px 3px rgba(0, 120, 212, 0.4) !important;
+  }
+  div[data-testid="stSlider"] [data-testid="stThumbValue"] {
+      color: #0f172a !important;
+      font-weight: 700 !important;
+      font-size: 0.74rem !important;
+  }
+  div[data-testid="stSlider"] label p {
+      font-size: 0.70rem !important;
+      font-weight: 600 !important;
+      color: #475569 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.04em !important;
+      margin-bottom: 2px !important;
+  }
+  div[data-testid="stNumberInput"] label p {
+      font-size: 0.70rem !important;
+      font-weight: 600 !important;
+      color: #475569 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.04em !important;
+      margin-bottom: 2px !important;
+  }
+  div[data-testid="stNumberInput"] div[data-baseweb="input"] {
+      min-height: 32px !important;
+      height: 32px !important;
+      border-radius: 4px !important;
+      border-color: #cbd5e1 !important;
+      background: #ffffff !important;
+  }
+  div[data-testid="stNumberInput"] input {
+      font-size: 0.82rem !important;
+      color: #0f172a !important;
+      padding: 2px 8px !important;
+  }
+
+  /* Modern Tabs */
+  div[data-testid="stTabs"] button[role="tab"] {
+      font-size: 0.78rem !important;
+      font-weight: 600 !important;
+      color: #64748b !important;
+      padding: 6px 12px !important;
+  }
+  div[data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
+      color: #0078d4 !important;
+      border-bottom-color: #0078d4 !important;
+  }
+
+  /* Breadcrumb & Section Navigation */
+  .breadcrumb-bar {
+      margin-bottom: 8px;
+  }
+  .breadcrumb-path {
+      font-size: 0.70rem;
+      font-weight: 600;
+      color: #64748b;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      display: inline-block;
+  }
+  .page-main-heading {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.015em;
+      margin: 0 0 2px 0;
+      line-height: 1.25;
+  }
+  .page-main-sub {
+      font-size: 0.80rem;
+      color: #64748b;
+      margin-bottom: 10px;
+      line-height: 1.35;
+  }
+
+  /* Compact Customer Journey Flow */
+  .journey-flow-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 8px 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+  .journey-header-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #64748b;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+  }
+  .journey-steps-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+  }
+  .journey-step {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+  }
+  .journey-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+  }
+  .journey-step.done .journey-circle {
+      background: #e0f2fe;
+      color: #0284c7;
+  }
+  .journey-step.current .journey-circle {
+      background: #0078d4;
+      color: #ffffff;
+  }
+  .journey-step.next .journey-circle {
+      background: #f1f5f9;
+      color: #64748b;
+  }
+  .j-title {
+      font-size: 0.70rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.1;
+  }
+  .j-sub {
+      font-size: 0.62rem;
+      color: #64748b;
+      line-height: 1.1;
+  }
+  .journey-arrow {
+      color: #94a3b8;
+      font-size: 0.80rem;
+      font-weight: 600;
+  }
+
+  /* Simulated Customer Scenario Card */
+  .scenario-profile-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid #0078d4;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+  }
+  .scenario-profile-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+  }
+  .scenario-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #0078d4;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+  }
+  .scenario-order-badge {
+      font-size: 0.64rem;
+      font-weight: 600;
+      color: #475569;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 1px 6px;
+      border-radius: 4px;
+  }
+  .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 14px;
+  }
+  .scenario-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.74rem;
+      border-bottom: 1px dashed #e2e8f0;
+      padding-bottom: 2px;
+  }
+  .scenario-k {
+      color: #64748b;
+      font-weight: 500;
+  }
+  .scenario-v {
+      color: #0f172a;
+      font-weight: 700;
+  }
+
+  /* Form Group Headers */
+  .input-group-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.70rem;
+      font-weight: 700;
+      color: #334155;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #e2e8f0;
+  }
+
+  /* Prediction Hero Card */
+  .pred-hero-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      margin-bottom: 10px;
+  }
+  .pred-status-banner {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+  }
+  .pred-status-bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+  }
+  .pred-metrics-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 6px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 8px 10px;
+      margin-top: 4px;
+  }
+  .pred-strip-col {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  }
+  .strip-k {
+      font-size: 0.64rem;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+  }
+  .strip-v {
+      font-size: 1.10rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.15;
+      margin-top: 1px;
+  }
+  .strip-sub {
+      font-size: 0.62rem;
+      color: #94a3b8;
+  }
+
+  /* Recommended Action Card */
+  .rec-action-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #0078d4;
+      border-radius: 6px;
+      padding: 12px 14px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+      margin-bottom: 10px;
+  }
+  .rec-action-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+  }
+  .rec-action-badge {
+      font-size: 0.66rem;
+      font-weight: 700;
+      color: #0078d4;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+  }
+  .rec-urgency-pill {
+      font-size: 0.64rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: #f1f5f9;
+      color: #475569;
+      letter-spacing: 0.02em;
+  }
+  .rec-strategy-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 8px;
+      line-height: 1.25;
+  }
+  .rec-section-block {
+      margin-bottom: 8px;
+  }
+  .rec-section-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #64748b;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+  }
+  .rec-section-content {
+      font-size: 0.80rem;
+      color: #334155;
+      line-height: 1.45;
+  }
+  .rec-footer-grid {
+      display: flex;
+      gap: 16px;
+      padding-top: 6px;
+      border-top: 1px solid #f1f5f9;
+      margin-top: 6px;
+  }
+  .rec-footer-item {
+      display: flex;
+      flex-direction: column;
+  }
+  .rec-footer-k {
+      font-size: 0.62rem;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+  }
+  .rec-footer-v {
+      font-size: 0.80rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-top: 1px;
+  }
+
   /* Divider */
   .fancy-divider {
       height: 1px;
@@ -546,13 +921,19 @@ with st.sidebar:
 st.markdown("""
 <div class="top-navbar">
     <div class="top-navbar-left">
-        <div class="top-navbar-title">E-Commerce Customer Intelligence</div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="3" width="20" height="18" rx="3" stroke="#0078d4" stroke-width="2"/>
+                <path d="M7 16V13M12 16V9M17 16V11" stroke="#0078d4" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div class="top-navbar-title">E-Commerce Customer Intelligence</div>
+        </div>
         <div class="top-navbar-sub">Sales • Customer Behavior • Predictive Analytics</div>
     </div>
     <div class="top-navbar-meta">
-        <span class="badge-tag">Dataset: Olist Brazilian E-Commerce</span>
+        <span class="badge-tag">Dataset: Olist</span>
         <span class="badge-tag">Model: Logistic Regression</span>
-        <span class="badge-tag badge-status">Status: Live Engine</span>
+        <span class="badge-tag badge-status">Status: Live</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -1029,104 +1410,472 @@ elif page == "Prediction Simulator":
     model, model_meta = get_model()
     _, _, feat_imp, _ = get_reports_data()
 
-    st.markdown("### Customer Repeat Purchase Simulator")
-    st.markdown("<div style='font-size:0.84rem;color:#64748b;margin-bottom:12px;'>Simulate an initial customer transaction to predict repeat purchase probability and receive automated CRM playbooks.</div>", unsafe_allow_html=True)
+    # ── Header & Context Breadcrumb ───────────────────────────────────────────
+    st.markdown("""
+    <div class="breadcrumb-bar">
+        <span class="breadcrumb-path">Customer Intelligence &nbsp;/&nbsp; Prediction Simulator</span>
+        <h2 class="page-main-heading">Customer Repeat Purchase</h2>
+        <div class="page-main-sub">Estimate the likelihood that a customer will purchase again using calibrated machine learning inference on Order #1 signals.</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    sim_col1, sim_col2 = st.columns([55, 45])
+    # ── Customer Journey Visual Flow ──────────────────────────────────────────
+    st.markdown("""
+    <div class="journey-flow-card">
+        <div class="journey-header-label">Customer Intelligence Journey</div>
+        <div class="journey-steps-container">
+            <div class="journey-step done">
+                <div class="journey-circle">1</div>
+                <div class="journey-text">
+                    <span class="j-title">INITIAL ORDER</span>
+                    <span class="j-sub">Order #1 Captured</span>
+                </div>
+            </div>
+            <div class="journey-arrow">→</div>
+            <div class="journey-step done">
+                <div class="journey-circle">2</div>
+                <div class="journey-text">
+                    <span class="j-title">EXPERIENCE</span>
+                    <span class="j-sub">Fulfillment & SLA</span>
+                </div>
+            </div>
+            <div class="journey-arrow">→</div>
+            <div class="journey-step current">
+                <div class="journey-circle">3</div>
+                <div class="journey-text">
+                    <span class="j-title">AI INFERENCE</span>
+                    <span class="j-sub">Propensity Scoring</span>
+                </div>
+            </div>
+            <div class="journey-arrow">→</div>
+            <div class="journey-step next">
+                <div class="journey-circle">4</div>
+                <div class="journey-text">
+                    <span class="j-title">CRM ACTION</span>
+                    <span class="j-sub">Targeted Playbook</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # ── Category and Payment Mapping Dictionaries ─────────────────────────────
+    category_options = {
+        "Bed Bath Table": "bed_bath_table",
+        "Furniture Decor": "furniture_decor",
+        "Sports Leisure": "sports_leisure",
+        "Computers Accessories": "computers_accessories",
+        "Health Beauty": "health_beauty",
+        "Watches Gifts": "watches_gifts",
+        "Housewares": "housewares",
+        "Auto": "auto",
+        "Toys": "toys",
+        "Garden Tools": "garden_tools",
+        "Telephony": "telephony",
+        "Cool Stuff": "cool_stuff",
+        "Other Category": "other_category"
+    }
+    payment_options = {
+        "Credit Card": "credit_card",
+        "Boleto": "boleto",
+        "Voucher": "voucher",
+        "Debit Card": "debit_card"
+    }
+
+    # Initialize Simulator State if not present
+    defaults = {
+        "sim_spend": 180.0,
+        "sim_freight": 25.0,
+        "sim_items": 1,
+        "sim_installments": 3,
+        "sim_category_label": "Bed Bath Table",
+        "sim_state": "SP",
+        "sim_payment_label": "Credit Card",
+        "sim_review": 5,
+        "sim_delivery": 10.0,
+        "sim_is_delayed": 0
+    }
+    for k, v in defaults.items():
+        if k not in st.session_state:
+            st.session_state[k] = v
+
+    # ── Two-Sided Experience Layout ───────────────────────────────────────────
+    sim_col1, sim_col2 = st.columns([46, 54], gap="medium")
+
     with sim_col1:
-        st.markdown('<div class="dash-card"><div class="dash-card-title">Initial Order Features Input</div><div class="dash-card-sub">Strictly anti-leakage inputs captured at Order #1 delivery</div>', unsafe_allow_html=True)
-        in1, in2 = st.columns(2)
-        with in1:
-            spend = st.number_input("Spend Amount (BRL)", 10.0, 5000.0, 180.0, 10.0)
-            items_cnt = st.number_input("Order Items Count", 1, 20, 1)
-            category = st.selectbox("Product Category", [
-                "bed_bath_table","furniture_decor","sports_leisure","computers_accessories",
-                "health_beauty","watches_gifts","housewares","auto","toys","garden_tools",
-                "telephony","cool_stuff","other_category"])
-            payment_type = st.selectbox("Payment Method", ["credit_card","boleto","voucher","debit_card"])
-        with in2:
-            freight = st.number_input("Freight Fee (BRL)", 0.0, 400.0, 25.0, 5.0)
-            installments = st.slider("Installments", 1, 24, 3)
-            customer_state = st.selectbox("Customer State", ["SP","RJ","MG","RS","PR","SC","Other_State"])
-            review_score = st.slider("Review Rating (1–5)", 1, 5, 5)
+        st.markdown('<div class="dash-card"><div class="dash-card-title">Customer Profile & Inputs</div><div class="dash-card-sub">Configure Order #1 transaction features to evaluate repeat propensity</div>', unsafe_allow_html=True)
 
-        del_col1, del_col2 = st.columns(2)
-        with del_col1:
-            delivery_days = st.slider("Delivery Duration (Days)", 1.0, 60.0, 10.0)
-        with del_col2:
-            is_delayed = st.selectbox("Delivered Past SLA?", [0, 1], format_func=lambda x: "Yes — Late Delivery" if x==1 else "No — On Time")
-        
-        delay_days = 4.0 if is_delayed == 1 else 0.0
-        predict_btn = st.button("Predict Customer Return Propensity", type="primary", use_container_width=True)
+        # ── Visual Scenario Summary Card ──────────────────────────────────────
+        st.markdown(f"""
+        <div class="scenario-profile-card">
+            <div class="scenario-profile-head">
+                <span class="scenario-tag">Simulated Customer Scenario</span>
+                <span class="scenario-order-badge">Order #1 Profile</span>
+            </div>
+            <div class="scenario-grid">
+                <div class="scenario-item">
+                    <span class="scenario-k">Category</span>
+                    <span class="scenario-v">{st.session_state.get('sim_category_label', 'Bed Bath Table')}</span>
+                </div>
+                <div class="scenario-item">
+                    <span class="scenario-k">State</span>
+                    <span class="scenario-v">{st.session_state.get('sim_state', 'SP')} (Brazil)</span>
+                </div>
+                <div class="scenario-item">
+                    <span class="scenario-k">Payment</span>
+                    <span class="scenario-v">{st.session_state.get('sim_payment_label', 'Credit Card')}</span>
+                </div>
+                <div class="scenario-item">
+                    <span class="scenario-k">Order Value</span>
+                    <span class="scenario-v">R$ {float(st.session_state.get('sim_spend', 180.0)):,.2f}</span>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # ── Group 1: Purchase Details ─────────────────────────────────────────
+        st.markdown('<div class="input-group-header">Purchase Details</div>', unsafe_allow_html=True)
+        g1_col1, g1_col2 = st.columns(2)
+        with g1_col1:
+            spend = st.number_input(
+                "Spend Amount (BRL)",
+                min_value=10.0, max_value=5000.0,
+                value=float(st.session_state["sim_spend"]),
+                step=10.0,
+                help="Amount spent on the initial order.",
+                key="input_spend"
+            )
+            items_cnt = st.number_input(
+                "Order Items Count",
+                min_value=1, max_value=20,
+                value=int(st.session_state["sim_items"]),
+                step=1,
+                help="Total items included in Order #1.",
+                key="input_items"
+            )
+        with g1_col2:
+            freight = st.number_input(
+                "Freight Fee (BRL)",
+                min_value=0.0, max_value=400.0,
+                value=float(st.session_state["sim_freight"]),
+                step=5.0,
+                help="Shipping cost associated with the order.",
+                key="input_freight"
+            )
+            installments = st.slider(
+                "Installments",
+                min_value=1, max_value=24,
+                value=int(st.session_state["sim_installments"]),
+                help="Number of credit payment installments.",
+                key="input_installments"
+            )
+
+        # ── Group 2: Product & Customer ───────────────────────────────────────
+        st.markdown('<div class="input-group-header">Product & Customer Profile</div>', unsafe_allow_html=True)
+        g2_col1, g2_col2 = st.columns(2)
+        with g2_col1:
+            cat_list = list(category_options.keys())
+            cur_cat_idx = cat_list.index(st.session_state["sim_category_label"]) if st.session_state["sim_category_label"] in cat_list else 0
+            category_label = st.selectbox(
+                "Product Category",
+                cat_list,
+                index=cur_cat_idx,
+                help="Commercial category of the primary product purchased.",
+                key="input_cat"
+            )
+            pay_list = list(payment_options.keys())
+            cur_pay_idx = pay_list.index(st.session_state["sim_payment_label"]) if st.session_state["sim_payment_label"] in pay_list else 0
+            payment_label = st.selectbox(
+                "Payment Method",
+                pay_list,
+                index=cur_pay_idx,
+                help="Financial instrument used for Order #1.",
+                key="input_pay"
+            )
+        with g2_col2:
+            state_list = ["SP", "RJ", "MG", "RS", "PR", "SC", "Other_State"]
+            cur_state_idx = state_list.index(st.session_state["sim_state"]) if st.session_state["sim_state"] in state_list else 0
+            customer_state = st.selectbox(
+                "Customer State",
+                state_list,
+                index=cur_state_idx,
+                help="Geographic destination state of the customer.",
+                key="input_state"
+            )
+
+        # ── Group 3: Experience & Fulfillment ─────────────────────────────────
+        st.markdown('<div class="input-group-header">Experience & Fulfillment</div>', unsafe_allow_html=True)
+        g3_col1, g3_col2 = st.columns(2)
+        with g3_col1:
+            review_score = st.slider(
+                "Review Rating (1–5)",
+                min_value=1, max_value=5,
+                value=int(st.session_state["sim_review"]),
+                help="Customer's post-purchase review score.",
+                key="input_review"
+            )
+            delivery_days = st.slider(
+                "Delivery Duration (Days)",
+                min_value=1.0, max_value=60.0,
+                value=float(st.session_state["sim_delivery"]),
+                step=1.0,
+                help="Number of days taken to deliver the order.",
+                key="input_deliv_days"
+            )
+        with g3_col2:
+            sla_options = [0, 1]
+            cur_sla_idx = 1 if st.session_state["sim_is_delayed"] == 1 else 0
+            is_delayed = st.selectbox(
+                "Delivered Past SLA?",
+                sla_options,
+                index=cur_sla_idx,
+                format_func=lambda x: "Yes — Late Delivery" if x == 1 else "No — On Time (Within SLA)",
+                help="Whether order was delivered after the promised delivery deadline.",
+                key="input_sla"
+            )
+
+        # Update session state values
+        st.session_state["sim_spend"] = spend
+        st.session_state["sim_freight"] = freight
+        st.session_state["sim_items"] = items_cnt
+        st.session_state["sim_installments"] = installments
+        st.session_state["sim_category_label"] = category_label
+        st.session_state["sim_state"] = customer_state
+        st.session_state["sim_payment_label"] = payment_label
+        st.session_state["sim_review"] = review_score
+        st.session_state["sim_delivery"] = delivery_days
+        st.session_state["sim_is_delayed"] = is_delayed
+
+        # ── Action Buttons ────────────────────────────────────────────────────
+        st.markdown("<div style='height: 8px;'></div>", unsafe_allow_html=True)
+        btn_c1, btn_c2 = st.columns([7, 3])
+        with btn_c1:
+            predict_clicked = st.button("Predict Repeat Purchase", type="primary", use_container_width=True, key="btn_run_pred")
+        with btn_c2:
+            reset_clicked = st.button("Reset Inputs", use_container_width=True, key="btn_reset_sim")
+            if reset_clicked:
+                for k, v in defaults.items():
+                    st.session_state[k] = v
+                st.rerun()
+
         st.markdown('</div>', unsafe_allow_html=True)
 
     with sim_col2:
-        st.markdown('<div class="dash-card"><div class="dash-card-title">Prediction Result & Decision Support</div><div class="dash-card-sub">Calibrated machine learning inference output</div>', unsafe_allow_html=True)
-        
-        # Prepare input dataframe
+        st.markdown('<div class="dash-card"><div class="dash-card-title">Prediction & Business Intelligence</div><div class="dash-card-sub">Calibrated machine learning inference & automated CRM action playbooks</div>', unsafe_allow_html=True)
+
+        # Prepare input dataframe for model
+        cat_key = category_options.get(st.session_state["sim_category_label"], "bed_bath_table")
+        pay_key = payment_options.get(st.session_state["sim_payment_label"], "credit_card")
+        delay_days = 4.0 if st.session_state["sim_is_delayed"] == 1 else 0.0
+
         input_row = pd.DataFrame([{
-            "spend_order1": float(spend),
-            "items_count_order1": int(items_cnt),
+            "spend_order1": float(st.session_state["sim_spend"]),
+            "items_count_order1": int(st.session_state["sim_items"]),
             "unique_products_order1": 1,
-            "freight_value_order1": float(freight),
-            "freight_ratio_order1": float(freight) / max(float(spend), 1.0),
-            "installments_order1": int(installments),
+            "freight_value_order1": float(st.session_state["sim_freight"]),
+            "freight_ratio_order1": float(st.session_state["sim_freight"]) / max(float(st.session_state["sim_spend"]), 1.0),
+            "installments_order1": int(st.session_state["sim_installments"]),
             "payment_splits_order1": 1,
-            "delivery_days_order1": float(delivery_days),
+            "delivery_days_order1": float(st.session_state["sim_delivery"]),
             "delivery_delay_days_order1": float(delay_days),
-            "is_delayed_order1": int(is_delayed),
-            "review_score_order1": float(review_score),
-            "has_comment_title_order1": 1 if review_score in (1,5) else 0,
-            "has_comment_message_order1": 1 if review_score in (1,5) else 0,
+            "is_delayed_order1": int(st.session_state["sim_is_delayed"]),
+            "review_score_order1": float(st.session_state["sim_review"]),
+            "has_comment_title_order1": 1 if st.session_state["sim_review"] in (1, 5) else 0,
+            "has_comment_message_order1": 1 if st.session_state["sim_review"] in (1, 5) else 0,
             "purchase_hour_order1": 14,
-            "payment_type_order1": payment_type,
-            "customer_state_order1": customer_state,
-            "category_order1": category,
+            "payment_type_order1": pay_key,
+            "customer_state_order1": st.session_state["sim_state"],
+            "category_order1": cat_key,
             "purchase_dow_order1": "Monday"
         }])
 
+        # Predict probability using champion model
         prob = model.predict_proba(input_row)[0][1]
         prob_pct = prob * 100
-        risk_tier = "High Return Propensity" if prob >= 0.50 else "Medium Return Propensity" if prob >= 0.40 else "Low Return Propensity"
+        lift = prob_pct - 3.0
 
+        # Determine visual state based on prediction
         if prob >= 0.50:
-            st.markdown(f"""
-            <div class="pred-positive">
-                <div class="pred-status">Likely Repeat Buyer · Tier: {risk_tier}</div>
-                <div class="pred-prob">{prob_pct:.1f}%</div>
-                <div class="pred-label">Baseline marketplace return rate: 3.00% · Model recall: 56.96%</div>
-            </div>""", unsafe_allow_html=True)
+            status_text = "HIGH RETURN PROPENSITY"
+            status_bg = "#f0fdf4"
+            status_border = "#bbf7d0"
+            status_color = "#15803d"
+            card_border = "#86efac"
+            gauge_color = "#16a34a"
+        elif prob >= 0.40:
+            status_text = "MEDIUM RETURN PROPENSITY"
+            status_bg = "#fffbeb"
+            status_border = "#fde68a"
+            status_color = "#b45309"
+            card_border = "#fcd34d"
+            gauge_color = "#d97706"
         else:
-            st.markdown(f"""
-            <div class="pred-negative">
-                <div class="pred-status">One-Time Buyer Risk · Tier: {risk_tier}</div>
-                <div class="pred-prob">{prob_pct:.1f}%</div>
-                <div class="pred-label">Baseline marketplace return rate: 3.00% · Model recall: 56.96%</div>
-            </div>""", unsafe_allow_html=True)
+            status_text = "LOW RETURN PROPENSITY (CHURN RISK)"
+            status_bg = "#fef2f2"
+            status_border = "#fecaca"
+            status_color = "#b91c1c"
+            card_border = "#fca5a5"
+            gauge_color = "#dc2626"
 
-        rec = RecommendationEngine().get_individual_action(prob, "Potential Loyalists" if spend >= 200 else "Standard", is_delayed=is_delayed)
+        # ── Prediction Hero Card ──────────────────────────────────────────────
         st.markdown(f"""
-        <div class="playbook-card" style="margin-top:12px;">
-            <div class="playbook-title">Strategy: {rec['playbook']}</div>
-            <div style="font-size:0.78rem;color:#64748b;margin-bottom:6px;">Urgency: <strong style="color:#0f172a">{rec['urgency']}</strong></div>
-            <div class="playbook-body">{rec['action']}</div>
-        </div>""", unsafe_allow_html=True)
+        <div class="pred-hero-card" style="border-color: {card_border};">
+            <div class="pred-status-banner" style="background: {status_bg}; border: 1px solid {status_border}; color: {status_color};">
+                <span class="pred-status-bullet" style="background: {status_color};"></span>
+                <span>{status_text}</span>
+            </div>
+        """, unsafe_allow_html=True)
+
+        # Plotly Gauge Indicator
+        fig_gauge = go.Figure(go.Indicator(
+            mode="gauge+number",
+            value=prob_pct,
+            number={
+                'suffix': "%",
+                'font': {'size': 36, 'family': 'Inter, -apple-system, sans-serif', 'color': '#0f172a', 'weight': 800}
+            },
+            gauge={
+                'axis': {'range': [0, 100], 'tickwidth': 1, 'tickcolor': "#cbd5e1", 'ticks': "", 'tickfont': {'size': 9, 'color': '#94a3b8'}},
+                'bar': {'color': gauge_color, 'thickness': 0.32},
+                'bgcolor': "#f1f5f9",
+                'borderwidth': 0,
+                'steps': [
+                    {'range': [0, 40], 'color': "rgba(220, 38, 38, 0.08)"},
+                    {'range': [40, 50], 'color': "rgba(217, 119, 6, 0.08)"},
+                    {'range': [50, 100], 'color': "rgba(22, 163, 74, 0.08)"}
+                ],
+                'threshold': {
+                    'line': {'color': gauge_color, 'width': 3},
+                    'thickness': 0.8,
+                    'value': prob_pct
+                }
+            }
+        ))
+        fig_gauge.update_layout(
+            height=165,
+            margin=dict(l=15, r=15, t=10, b=10),
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(family="Inter, -apple-system, Segoe UI, sans-serif")
+        )
+        st.plotly_chart(fig_gauge, use_container_width=True)
+
+        # Benchmark Metrics Strip
+        st.markdown(f"""
+            <div class="pred-metrics-strip">
+                <div class="pred-strip-col">
+                    <span class="strip-k">Baseline Repeat Rate</span>
+                    <span class="strip-v">3.00%</span>
+                    <span class="strip-sub">Marketplace Avg</span>
+                </div>
+                <div class="pred-strip-col">
+                    <span class="strip-k">Predicted Probability</span>
+                    <span class="strip-v" style="color: {status_color};">{prob_pct:.1f}%</span>
+                    <span class="strip-sub">Calibrated Output</span>
+                </div>
+                <div class="pred-strip-col">
+                    <span class="strip-k">Probability Lift</span>
+                    <span class="strip-v">{'+' if lift >= 0 else ''}{lift:.1f} pp</span>
+                    <span class="strip-sub">Above Baseline</span>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        # ── Tabs: Strategic Action, Model Drivers, Audit Vector ──────────────
+        t_strat, t_drivers, t_vector = st.tabs([
+            "Strategic Recommendation",
+            "Why This Result? (Model Drivers)",
+            "Model Feature Vector"
+        ])
+
+        with t_strat:
+            # Business Recommendation from RecommendationEngine
+            rec = RecommendationEngine().get_individual_action(
+                prob,
+                "Potential Loyalists" if float(st.session_state["sim_spend"]) >= 200 else "Standard",
+                is_delayed=st.session_state["sim_is_delayed"]
+            )
+
+            # Timing mapping
+            if "recovery" in rec['playbook'].lower() or st.session_state["sim_is_delayed"] == 1:
+                timing = "Immediate (within 48 hours)"
+                channel = "Direct Email & CS Ticket"
+            elif prob >= 0.50:
+                timing = "Within 30 days"
+                channel = "Targeted Cross-sell Email / Push"
+            else:
+                timing = "Within 14 days"
+                channel = "Voucher Incentive & Retargeting"
+
+            st.markdown(f"""
+            <div class="rec-action-card">
+                <div class="rec-action-header">
+                    <span class="rec-action-badge">RECOMMENDED ACTION</span>
+                    <span class="rec-urgency-pill">{rec['urgency']}</span>
+                </div>
+                <div class="rec-strategy-title">{rec['playbook']}</div>
+
+                <div class="rec-section-block">
+                    <div class="rec-section-label">WHY THIS STRATEGY</div>
+                    <div class="rec-section-content">{rec['diagnosis']}</div>
+                </div>
+
+                <div class="rec-section-block">
+                    <div class="rec-section-label">SPECIFIC CRM ACTION</div>
+                    <div class="rec-section-content">{rec['action']}</div>
+                </div>
+
+                <div class="rec-footer-grid">
+                    <div class="rec-footer-item">
+                        <span class="rec-footer-k">RECOMMENDED TIMING</span>
+                        <span class="rec-footer-v">{timing}</span>
+                    </div>
+                    <div class="rec-footer-item">
+                        <span class="rec-footer-k">TARGET CHANNEL</span>
+                        <span class="rec-footer-v">{channel}</span>
+                    </div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+        with t_drivers:
+            st.markdown("""
+            <div style="font-size:0.78rem;color:#475569;margin-bottom:8px;line-height:1.4;">
+                <strong>Global Feature Importance</strong> from champion Logistic Regression coefficients.
+                Higher spend, prompt delivery, and favorable reviews positively drive repeat propensity, while fulfillment delay and disproportionate shipping cost depress retention.
+            </div>
+            """, unsafe_allow_html=True)
+            top_fi = feat_imp.head(8).copy()
+            top_fi["clean_feature"] = (
+                top_fi["feature"]
+                .str.replace("category_order1_", "Category: ")
+                .str.replace("customer_state_order1_", "State: ")
+                .str.replace("_", " ")
+                .str.title()
+            )
+            fig_fi = px.bar(
+                top_fi.sort_values("abs_impact", ascending=True),
+                x="abs_impact", y="clean_feature", orientation="h",
+                labels={"abs_impact": "Model Impact Magnitude", "clean_feature": ""},
+                color_discrete_sequence=["#0078d4"]
+            )
+            apply_plotly_style(fig_fi, height=220)
+            st.plotly_chart(fig_fi, use_container_width=True)
+
+        with t_vector:
+            st.markdown("""
+            <div style="font-size:0.76rem;color:#64748b;margin-bottom:6px;">
+                Verified 18-feature inference vector evaluated by the Scikit-learn Pipeline (14 numerical + 4 categorical):
+            </div>
+            """, unsafe_allow_html=True)
+            st.dataframe(
+                input_row.T.reset_index().rename(columns={"index": "Feature Name", 0: "Feature Value"}),
+                use_container_width=True,
+                height=220
+            )
+
         st.markdown('</div>', unsafe_allow_html=True)
-
-    # ── Section: Global Feature Importance ────────────────────────────────────
-    st.markdown("### Global Model Feature Importance")
-    st.markdown("<div style='font-size:0.84rem;color:#64748b;margin-bottom:12px;'>What influences customer repeat purchase? Actual model coefficients from champion Logistic Regression.</div>", unsafe_allow_html=True)
-
-    top_fi = feat_imp.head(10).copy()
-    top_fi["clean_feature"] = top_fi["feature"].str.replace("category_order1_","Category: ").str.replace("customer_state_order1_","State: ").str.replace("_"," ")
-    fig_fi = px.bar(
-        top_fi.sort_values("abs_impact", ascending=True),
-        x="abs_impact", y="clean_feature", orientation="h",
-        labels={"abs_impact": "Absolute Model Impact Magnitude", "clean_feature": ""},
-        color_discrete_sequence=["#0078d4"]
-    )
-    apply_plotly_style(fig_fi, height=280)
-    st.plotly_chart(fig_fi, use_container_width=True)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
