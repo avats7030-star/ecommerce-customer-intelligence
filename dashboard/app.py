@@ -105,35 +105,95 @@ st.markdown("""
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 6px;
-      padding: 12px 18px;
-      margin-bottom: 18px;
+      padding: 10px 16px;
+      margin-top: 0;
+      margin-bottom: 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+  .top-navbar-left {
+      display: flex;
+      flex-direction: column;
   }
   .top-navbar-title {
       font-size: 1.25rem;
       font-weight: 700;
       color: #0f172a;
       line-height: 1.2;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.015em;
   }
   .top-navbar-sub {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       color: #64748b;
+      font-weight: 500;
       margin-top: 2px;
   }
+  .top-navbar-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+  }
   .badge-tag {
-      display: inline-block;
-      background: #f1f5f9;
+      display: inline-flex;
+      align-items: center;
+      background: #f8fafc;
       border: 1px solid #cbd5e1;
       color: #475569;
-      font-size: 0.72rem;
+      font-size: 0.70rem;
       font-weight: 600;
       padding: 3px 8px;
       border-radius: 4px;
-      margin-left: 6px;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+  }
+  .badge-status {
+      background: #f0fdf4;
+      border-color: #86efac;
+      color: #166534;
+  }
+
+  /* Compact Filter Toolbar & Form Controls */
+  div[data-testid="stSelectbox"] {
+      margin-bottom: 0px !important;
+  }
+  div[data-testid="stSelectbox"] label p {
+      font-size: 0.70rem !important;
+      font-weight: 600 !important;
+      color: #475569 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.04em !important;
+      margin-bottom: 2px !important;
+  }
+  div[data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+      min-height: 32px !important;
+      height: 32px !important;
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
+      font-size: 0.80rem !important;
+      border-radius: 4px !important;
+      border-color: #cbd5e1 !important;
+  }
+  div[data-testid="stButton"] button {
+      height: 32px !important;
+      min-height: 32px !important;
+      padding: 0 10px !important;
+      font-size: 0.76rem !important;
+      font-weight: 600 !important;
+      border-radius: 4px !important;
+      border: 1px solid #cbd5e1 !important;
+      color: #334155 !important;
+      background: #f8fafc !important;
+      transition: all 0.15s ease !important;
+  }
+  div[data-testid="stButton"] button:hover {
+      background: #e2e8f0 !important;
+      border-color: #94a3b8 !important;
+      color: #0f172a !important;
   }
 
   /* Professional Compact KPI Cards */
@@ -141,55 +201,64 @@ st.markdown("""
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 6px;
-      padding: 14px 16px;
+      padding: 8px 12px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+      min-height: 72px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 4px;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
-      height: 100%;
   }
   .kpi-card:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
   .kpi-label {
-      font-size: 0.72rem;
-      font-weight: 600;
+      font-size: 0.65rem;
+      font-weight: 700;
       color: #64748b;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 3px;
+      margin-bottom: 1px;
+      line-height: 1.1;
   }
   .kpi-value {
-      font-size: 1.55rem;
+      font-size: 1.30rem;
       font-weight: 700;
       color: #0f172a;
       line-height: 1.15;
   }
   .kpi-sub {
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       color: #94a3b8;
-      margin-top: 4px;
-      display: flex;
-      align-items: center;
+      margin-top: 1px;
+      line-height: 1.15;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
   }
 
-  /* Dashboard Section Container */
+  /* Compact Dashboard Section Container */
   .dash-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 6px;
-      padding: 16px 18px;
+      padding: 8px 12px 4px 12px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.02);
-      margin-bottom: 14px;
+      margin-bottom: 8px;
   }
   .dash-card-title {
-      font-size: 0.92rem;
+      font-size: 0.85rem;
       font-weight: 700;
       color: #1e293b;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
+      line-height: 1.2;
   }
   .dash-card-sub {
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       color: #64748b;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
+      line-height: 1.2;
   }
 
   /* Compact Insight Grid Cards */
@@ -198,29 +267,29 @@ st.markdown("""
       border: 1px solid #e2e8f0;
       border-left: 3px solid #0078d4;
       border-radius: 6px;
-      padding: 12px 14px;
+      padding: 10px 12px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.02);
       height: 100%;
   }
   .insight-tag {
-      font-size: 0.68rem;
+      font-size: 0.66rem;
       font-weight: 700;
       color: #0078d4;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
   }
   .insight-main {
-      font-size: 0.84rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: #0f172a;
-      line-height: 1.35;
-      margin-bottom: 4px;
+      line-height: 1.30;
+      margin-bottom: 3px;
   }
   .insight-action {
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       color: #475569;
-      line-height: 1.35;
+      line-height: 1.30;
   }
 
   /* Prediction status box */
@@ -311,9 +380,13 @@ st.markdown("""
       margin: 16px 0;
   }
 
+  /* Streamlit Page Content Layout */
   .block-container {
-      padding-top: 1.2rem !important;
+      padding-top: 4.25rem !important;
       padding-bottom: 2rem !important;
+      padding-left: 1.75rem !important;
+      padding-right: 1.75rem !important;
+      max-width: 100% !important;
   }
 </style>
 """, unsafe_allow_html=True)
@@ -404,13 +477,13 @@ def get_executive_precomputed():
 
 
 # ── Plotly Unified Aesthetic Helper ──────────────────────────────────────────
-def apply_plotly_style(fig, height=330):
+def apply_plotly_style(fig, height=270):
     fig.update_layout(
         template="plotly_white",
         height=height,
-        margin=dict(l=15, r=15, t=30, b=15),
-        font=dict(family="Inter, Segoe UI, sans-serif", size=11, color="#334155"),
-        title_font=dict(size=12.5, color="#0f172a"),
+        margin=dict(l=8, r=8, t=8, b=8),
+        font=dict(family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif", size=11, color="#334155"),
+        title_font=dict(size=12, color="#0f172a"),
         hoverlabel=dict(bgcolor="#0f172a", font_size=11, font_color="#ffffff", font_family="Inter"),
         plot_bgcolor="#ffffff",
         paper_bgcolor="#ffffff",
@@ -470,16 +543,16 @@ with st.sidebar:
 # ══════════════════════════════════════════════════════════════════════════════
 # REUSABLE TOP APPLICATION HEADER
 # ══════════════════════════════════════════════════════════════════════════════
-st.markdown(f"""
+st.markdown("""
 <div class="top-navbar">
-    <div>
+    <div class="top-navbar-left">
         <div class="top-navbar-title">E-Commerce Customer Intelligence</div>
         <div class="top-navbar-sub">Sales • Customer Behavior • Predictive Analytics</div>
     </div>
-    <div>
+    <div class="top-navbar-meta">
         <span class="badge-tag">Dataset: Olist Brazilian E-Commerce</span>
         <span class="badge-tag">Model: Logistic Regression</span>
-        <span class="badge-tag">Status: Live Engine</span>
+        <span class="badge-tag badge-status">Status: Live Engine</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -489,19 +562,102 @@ st.markdown(f"""
 # 1. EXECUTIVE DASHBOARD
 # ══════════════════════════════════════════════════════════════════════════════
 if page == "Executive Dashboard":
-    # Instant load of precomputed aggregations (<0.005s)
-    pre = get_executive_precomputed()
-    tot_rev, tot_orders, deliv_orders, uniq_cust, aov, repeat_rate, avg_review = pre["kpis"]
-
     # ── Interactive Top Filter Bar ────────────────────────────────────────────
-    with st.container():
-        f1, f2, f3 = st.columns([3, 4, 3])
-        with f1:
-            year_filter = st.selectbox("Order Timeframe", ["All Periods (2016–2018)", "2017", "2018"])
-        with f2:
-            state_filter = st.selectbox("Geographic Filter", ["All States (National)", "SP (São Paulo)", "RJ (Rio de Janeiro)", "MG (Minas Gerais)", "RS (Rio Grande do Sul)"])
-        with f3:
-            pay_filter = st.selectbox("Payment Type", ["All Methods", "Credit Card", "Boleto", "Voucher", "Debit Card"])
+    st.markdown("""
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+        <span style="font-size: 0.70rem; font-weight: 700; color: #64748b; letter-spacing: 0.06em; text-transform: uppercase;">Filters</span>
+    </div>
+    """, unsafe_allow_html=True)
+    f1, f2, f3, f4 = st.columns([32, 32, 26, 10])
+    with f1:
+        year_filter = st.selectbox("Order Timeframe", ["All Periods (2016–2018)", "2017", "2018"], key="sb_year")
+    with f2:
+        state_filter = st.selectbox("Geographic Filter", ["All States (National)", "SP", "RJ", "MG", "RS", "PR", "SC", "BA", "DF", "GO", "ES"], key="sb_state")
+    with f3:
+        pay_filter = st.selectbox("Payment Type", ["All Methods", "Credit Card", "Boleto", "Voucher", "Debit Card"], key="sb_pay")
+    with f4:
+        st.markdown('<div style="height: 18px;"></div>', unsafe_allow_html=True)
+        if st.button("Reset", key="btn_reset_filters", use_container_width=True):
+            st.session_state["sb_year"] = "All Periods (2016–2018)"
+            st.session_state["sb_state"] = "All States (National)"
+            st.session_state["sb_pay"] = "All Methods"
+            st.rerun()
+
+    # Dynamic Filter Evaluation (Instant precomputed when default, fast sliced in-memory otherwise)
+    is_filtered = (
+        year_filter != "All Periods (2016–2018)" or
+        state_filter != "All States (National)" or
+        pay_filter != "All Methods"
+    )
+
+    if not is_filtered:
+        pre = get_executive_precomputed()
+        tot_rev, tot_orders, deliv_orders, uniq_cust, aov, repeat_rate, avg_review = pre["kpis"]
+        m_df = pre["monthly"]
+        pay_df = pre["pay_dist"]
+        cat_df = pre["cat_rev"]
+        state_df = pre["state_rev"]
+    else:
+        orders = get_orders_df()
+        cust = get_cust_df()
+        f_orders = orders
+
+        if year_filter == "2017":
+            f_orders = f_orders[f_orders["order_purchase_timestamp"].str.startswith("2017", na=False)]
+        elif year_filter == "2018":
+            f_orders = f_orders[f_orders["order_purchase_timestamp"].str.startswith("2018", na=False)]
+
+        if state_filter != "All States (National)":
+            f_orders = f_orders[f_orders["customer_state"] == state_filter]
+
+        if pay_filter != "All Methods":
+            pay_map = {
+                "Credit Card": "credit_card",
+                "Boleto": "boleto",
+                "Voucher": "voucher",
+                "Debit Card": "debit_card"
+            }
+            target_pay = pay_map.get(pay_filter, pay_filter.lower())
+            f_orders = f_orders[f_orders["primary_payment_type"] == target_pay]
+
+        f_deliv = f_orders[f_orders["is_delivered"] == 1]
+        tot_rev = float(f_deliv["total_payment_value"].sum()) if len(f_deliv) > 0 else 0.0
+        tot_orders = int(len(f_orders))
+        deliv_orders = int(len(f_deliv))
+        uniq_cust = int(f_orders["customer_unique_id"].nunique()) if len(f_orders) > 0 else 0
+        aov = float(f_deliv["total_payment_value"].mean()) if len(f_deliv) > 0 else 0.0
+        repeat_rate = float((cust["frequency"] > 1).mean() * 100)
+
+        # Monthly trend
+        if len(f_deliv) > 0:
+            m_df = f_deliv.groupby("order_year_month").agg(
+                revenue=("total_payment_value", "sum"),
+                orders=("order_id", "count")
+            ).reset_index()
+            m_df = m_df[(m_df["order_year_month"] >= "2017-01") & (m_df["order_year_month"] <= "2018-08")]
+        else:
+            m_df = pd.DataFrame(columns=["order_year_month", "revenue", "orders"])
+
+        # Payment distribution
+        if len(f_orders) > 0:
+            pay_dist_series = f_orders["primary_payment_type"].value_counts().head(4)
+            pay_df = pd.DataFrame({"payment_type": pay_dist_series.index, "count": pay_dist_series.values})
+        else:
+            pay_df = pd.DataFrame(columns=["payment_type", "count"])
+
+        # Category revenue
+        if len(f_orders) > 0:
+            cat_series = f_orders.groupby("primary_category")["total_payment_value"].sum().sort_values(ascending=False).head(10)
+            cat_df = pd.DataFrame({"category": cat_series.index, "revenue": cat_series.values})
+        else:
+            cat_df = pd.DataFrame(columns=["category", "revenue"])
+
+        # State revenue
+        if len(f_orders) > 0:
+            state_series = f_orders.groupby("customer_state")["total_payment_value"].sum().sort_values(ascending=False).head(10)
+            state_df = pd.DataFrame({"state": state_series.index, "revenue": state_series.values})
+        else:
+            state_df = pd.DataFrame(columns=["state", "revenue"])
 
     # ── KPI Metric Row ────────────────────────────────────────────────────────
     k1, k2, k3, k4, k5 = st.columns(5)
@@ -513,11 +669,12 @@ if page == "Executive Dashboard":
             <div class="kpi-sub">Total delivered GMV</div>
         </div>""", unsafe_allow_html=True)
     with k2:
+        deliv_pct = (deliv_orders / tot_orders * 100) if tot_orders > 0 else 0.0
         st.markdown(f"""
         <div class="kpi-card">
             <div class="kpi-label">Total Orders</div>
             <div class="kpi-value">{tot_orders:,}</div>
-            <div class="kpi-sub">{deliv_orders:,} delivered ({deliv_orders/tot_orders*100:.1f}%)</div>
+            <div class="kpi-sub">{deliv_orders:,} delivered ({deliv_pct:.1f}%)</div>
         </div>""", unsafe_allow_html=True)
     with k3:
         st.markdown(f"""
@@ -541,43 +698,43 @@ if page == "Executive Dashboard":
             <div class="kpi-sub">3.0% repeat base · 2.4x spend</div>
         </div>""", unsafe_allow_html=True)
 
-    st.markdown("<br>", unsafe_allow_html=True)
-
     # ── Interactive Plotly Chart Grid ─────────────────────────────────────────
     # ROW 1: Monthly Trend & Payment Share
     r1_col1, r1_col2 = st.columns([65, 35])
     with r1_col1:
         st.markdown('<div class="dash-card"><div class="dash-card-title">Monthly Revenue & Order Volume Trend</div><div class="dash-card-sub">Commercial performance across 2017–2018 order milestones</div>', unsafe_allow_html=True)
-        m_df = pre["monthly"]
         fig_trend = go.Figure()
-        fig_trend.add_trace(go.Scatter(
-            x=m_df["order_year_month"], y=m_df["revenue"]/1000,
-            name="Revenue (k BRL)", mode="lines+markers", line=dict(color="#0078d4", width=2.5),
-            marker=dict(size=5), fill="tozeroy", fillcolor="rgba(0,120,212,0.08)"
-        ))
-        fig_trend.add_trace(go.Bar(
-            x=m_df["order_year_month"], y=m_df["orders"],
-            name="Orders Count", yaxis="y2", marker_color="rgba(249,115,22,0.45)"
-        ))
-        fig_trend.update_layout(
-            yaxis=dict(title="Revenue (k BRL)", title_font=dict(size=10)),
-            yaxis2=dict(title="Orders Count", title_font=dict(size=10), overlaying="y", side="right", showgrid=False),
-            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(size=10)),
-        )
-        apply_plotly_style(fig_trend, height=300)
+        if len(m_df) > 0:
+            fig_trend.add_trace(go.Scatter(
+                x=m_df["order_year_month"], y=m_df["revenue"]/1000,
+                name="Revenue (k BRL)", mode="lines+markers", line=dict(color="#0078d4", width=2.5),
+                marker=dict(size=5), fill="tozeroy", fillcolor="rgba(0,120,212,0.08)"
+            ))
+            fig_trend.add_trace(go.Bar(
+                x=m_df["order_year_month"], y=m_df["orders"],
+                name="Orders Count", yaxis="y2", marker_color="rgba(249,115,22,0.45)"
+            ))
+            fig_trend.update_layout(
+                yaxis=dict(title="Revenue (k BRL)", title_font=dict(size=10)),
+                yaxis2=dict(title="Orders Count", title_font=dict(size=10), overlaying="y", side="right", showgrid=False),
+                legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(size=10)),
+            )
+        apply_plotly_style(fig_trend, height=270)
         st.plotly_chart(fig_trend, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
     with r1_col2:
         st.markdown('<div class="dash-card"><div class="dash-card-title">Payment Method Share</div><div class="dash-card-sub">Breakdown of gross transaction volume by payment type</div>', unsafe_allow_html=True)
-        pay_df = pre["pay_dist"]
-        fig_pay = px.pie(
-            pay_df, values="count", names="payment_type", hole=0.6,
-            color_discrete_sequence=["#0078d4", "#008272", "#f97316", "#7c3aed"]
-        )
-        fig_pay.update_traces(textposition='inside', textinfo='percent+label', textfont_size=10)
-        fig_pay.update_layout(showlegend=False)
-        apply_plotly_style(fig_pay, height=300)
+        if len(pay_df) > 0:
+            fig_pay = px.pie(
+                pay_df, values="count", names="payment_type", hole=0.6,
+                color_discrete_sequence=["#0078d4", "#008272", "#f97316", "#7c3aed"]
+            )
+            fig_pay.update_traces(textposition='inside', textinfo='percent+label', textfont_size=10)
+            fig_pay.update_layout(showlegend=False)
+        else:
+            fig_pay = go.Figure()
+        apply_plotly_style(fig_pay, height=270)
         st.plotly_chart(fig_pay, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -585,27 +742,31 @@ if page == "Executive Dashboard":
     r2_col1, r2_col2 = st.columns([50, 50])
     with r2_col1:
         st.markdown('<div class="dash-card"><div class="dash-card-title">Revenue by Product Category</div><div class="dash-card-sub">Top 10 highest grossing categories in Million BRL</div>', unsafe_allow_html=True)
-        cat_df = pre["cat_rev"]
-        fig_cat = px.bar(
-            cat_df, x="revenue", y="category", orientation="h",
-            labels={"revenue": "Revenue (BRL)", "category": ""},
-            color_discrete_sequence=["#0078d4"]
-        )
-        fig_cat.update_layout(yaxis=dict(autorange="reversed"))
-        apply_plotly_style(fig_cat, height=290)
+        if len(cat_df) > 0:
+            fig_cat = px.bar(
+                cat_df, x="revenue", y="category", orientation="h",
+                labels={"revenue": "Revenue (BRL)", "category": ""},
+                color_discrete_sequence=["#0078d4"]
+            )
+            fig_cat.update_layout(yaxis=dict(autorange="reversed"))
+        else:
+            fig_cat = go.Figure()
+        apply_plotly_style(fig_cat, height=270)
         st.plotly_chart(fig_cat, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
     with r2_col2:
         st.markdown('<div class="dash-card"><div class="dash-card-title">Revenue by Customer State</div><div class="dash-card-sub">Top 10 regional distribution of commercial revenue</div>', unsafe_allow_html=True)
-        state_df = pre["state_rev"]
-        fig_state = px.bar(
-            state_df, x="revenue", y="state", orientation="h",
-            labels={"revenue": "Revenue (BRL)", "state": ""},
-            color_discrete_sequence=["#008272"]
-        )
-        fig_state.update_layout(yaxis=dict(autorange="reversed"))
-        apply_plotly_style(fig_state, height=290)
+        if len(state_df) > 0:
+            fig_state = px.bar(
+                state_df, x="revenue", y="state", orientation="h",
+                labels={"revenue": "Revenue (BRL)", "state": ""},
+                color_discrete_sequence=["#008272"]
+            )
+            fig_state.update_layout(yaxis=dict(autorange="reversed"))
+        else:
+            fig_state = go.Figure()
+        apply_plotly_style(fig_state, height=270)
         st.plotly_chart(fig_state, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -703,8 +864,6 @@ elif page == "Customer Intelligence":
                 <div class="kpi-value">{int(c_row['recency'])} days</div>
                 <div class="kpi-sub">Average Rating: {c_row.get('avg_review_score',0):.1f} / 5.0</div>
             </div>""", unsafe_allow_html=True)
-
-        st.markdown("<br>", unsafe_allow_html=True)
 
         # ── Live ML Scoring for Selected Customer ─────────────────────────────
         pred_match = pred_dataset[pred_dataset["customer_unique_id"] == selected_id] if pred_dataset is not None else pd.DataFrame()
@@ -828,8 +987,6 @@ elif page == "RFM Segmentation":
                 <div class="kpi-value">R$ {s_row['total_revenue']/1e6:.2f}M</div>
                 <div class="kpi-sub">{s_row['customer_count']:,} users ({s_row['customer_share_pct']:.1f}% base)</div>
             </div>""", unsafe_allow_html=True)
-
-    st.markdown("<br>", unsafe_allow_html=True)
 
     # Interactive Plotly Charts
     rfm_c1, rfm_c2 = st.columns(2)
@@ -1219,9 +1376,9 @@ elif page == "About Project":
             <div class="dash-card-title">Project Objectives & Purpose</div>
             <div style="font-size:0.84rem;color:#475569;line-height:1.6;">
                 The platform is designed to resolve modern e-commerce retention bottlenecks by unifying historical business intelligence with early machine learning prediction.<br><br>
-                • <strong>Macro Intelligence</strong>: Real-time visibility into revenue seasonality, fulfillment SLAs, and spatial demand.<br>
-                • <strong>Behavioral Segmentation</strong>: RFM scoring across 93k customers to protect high-value GMV.<br>
-                • <strong>Early Repeat Purchase Prediction</strong>: Scoring incoming buyers on Order #1 to guide CRM intervention.
+                &bull; <strong>Macro Intelligence</strong>: Real-time visibility into revenue seasonality, fulfillment SLAs, and spatial demand.<br>
+                &bull; <strong>Behavioral Segmentation</strong>: RFM scoring across 93k customers to protect high-value GMV.<br>
+                &bull; <strong>Early Repeat Purchase Prediction</strong>: Scoring incoming buyers on Order #1 to guide CRM intervention.
             </div>
         </div>""", unsafe_allow_html=True)
 
@@ -1324,7 +1481,6 @@ elif page == "Upload Data & Predict":
         with k4:
             st.markdown(f'<div class="kpi-card"><div class="kpi-label">Batch Spend Volume</div><div class="kpi-value">R$ {df_proc["spend_order1"].sum():,.0f}</div></div>', unsafe_allow_html=True)
 
-        st.markdown("<br>", unsafe_allow_html=True)
         v_cols = [c for c in ["customer_unique_id", "spend_order1", "review_score_order1", "delivery_days_order1", "category_order1", "customer_state_order1", "repeat_prob_pct", "propensity_tier", "recommended_action"] if c in df_proc.columns]
         st.dataframe(df_proc[v_cols].rename(columns={
             "customer_unique_id": "Customer ID", "spend_order1": "Order #1 Spend (R$)",
