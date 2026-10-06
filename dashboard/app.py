@@ -99,6 +99,50 @@ st.markdown("""
       margin-top: 2px;
       letter-spacing: -0.01em;
   }
+  .sidebar-section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #64748b !important;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 4px 0 6px 4px;
+  }
+
+  /* Sidebar Section Dividers & Headers in Radiogroup */
+  div[data-testid="stSidebar"] div[role="radiogroup"] > label:nth-child(8) {
+      margin-top: 14px !important;
+      padding-top: 12px !important;
+      border-top: 1px solid #1e293b !important;
+      flex-wrap: wrap !important;
+  }
+  div[data-testid="stSidebar"] div[role="radiogroup"] > label:nth-child(8)::before {
+      content: "DATA";
+      display: block;
+      width: 100%;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+  }
+  div[data-testid="stSidebar"] div[role="radiogroup"] > label:nth-child(9) {
+      margin-top: 14px !important;
+      padding-top: 12px !important;
+      border-top: 1px solid #1e293b !important;
+      flex-wrap: wrap !important;
+  }
+  div[data-testid="stSidebar"] div[role="radiogroup"] > label:nth-child(9)::before {
+      content: "INFO";
+      display: block;
+      width: 100%;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+  }
 
   /* Compact Top Header Bar */
   .top-navbar {
@@ -877,6 +921,7 @@ with st.sidebar:
         <div class="sidebar-title">E-Commerce</div>
         <div class="sidebar-subtitle">Customer Intelligence</div>
     </div>
+    <div class="sidebar-section-label">Navigation</div>
     """, unsafe_allow_html=True)
 
     page = st.radio(
@@ -888,31 +933,12 @@ with st.sidebar:
             "Prediction Simulator",
             "Product Intelligence",
             "Model Evaluation",
-            "Business Playbooks",
-            "Methodology",
+            "Business Recommendations",
+            "Upload & Predict",
             "About Project",
-            "Upload Data & Predict",
         ],
         label_visibility="collapsed"
     )
-
-    st.markdown("<div class='fancy-divider' style='background:#1e293b;'></div>", unsafe_allow_html=True)
-    st.markdown("""
-    **Dataset Summary**
-    | Metric | Value |
-    |---|---|
-    | Orders | 99,441 |
-    | Customers | 93,358 |
-    | Revenue | R$ 15.42M |
-    | Timeframe | 2016 – 2018 |
-
-    **ML Champion**
-    | Metric | Score |
-    |---|---|
-    | Model | Logistic Reg. |
-    | Recall | 56.96% |
-    | ROC-AUC | 0.6110 |
-    """)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -2045,10 +2071,10 @@ elif page == "Model Evaluation":
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 7. BUSINESS PLAYBOOKS
+# 7. BUSINESS RECOMMENDATIONS
 # ══════════════════════════════════════════════════════════════════════════════
-elif page == "Business Playbooks":
-    st.markdown("### Strategic Business Decision Playbooks")
+elif page in ("Business Recommendations", "Business Playbooks"):
+    st.markdown("### Strategic Business Recommendations")
     st.markdown("<div style='font-size:0.84rem;color:#64748b;margin-bottom:12px;'>Prescriptive commercial strategies translating empirical RFM cohorts and prediction scores into growth interventions.</div>", unsafe_allow_html=True)
 
     recs = RecommendationEngine().get_all_recommendations()
@@ -2084,82 +2110,141 @@ elif page == "Business Playbooks":
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 8. METHODOLOGY
-# ══════════════════════════════════════════════════════════════════════════════
-elif page == "Methodology":
-    st.markdown("### Methodology & Technical Architecture")
-    st.markdown("<div style='font-size:0.84rem;color:#64748b;margin-bottom:12px;'>Comprehensive 10-stage end-to-end data pipeline documentation from raw ingestion to model deployment.</div>", unsafe_allow_html=True)
-
-    stages = [
-        ("1. Raw Relational Ingestion", "Audits foreign key integrity across 8 normalized Olist CSV tables spanning 99k orders from 2016 through 2018."),
-        ("2. Data Cleaning & Type Coercion", "Standardizes 8 timestamp columns to ISO datetimes, isolates delivered orders, and bounds monetary/geolocation anomalies."),
-        ("3. Relational Integration & Denormalization", "Constructs analytical star-schema views at order, item, and customer grains, precomputing SLA delays and installment ratios."),
-        ("4. Exploratory Data Analysis (EDA)", "Maps macro revenue seasonality, regional order density across 27 states, and fulfillment lead time impact on customer ratings."),
-        ("5. RFM Behavioral Segmentation", "Computes independent Recency, Frequency, and Monetary quintile scores, profiling 9 actionable customer lifecycle cohorts."),
-        ("6. Anti-Leakage Feature Engineering", "Strictly isolates customer signals at Order #1 delivery. Zero lookahead leakage into feature matrices."),
-        ("7. Model Training & Class Balancing", "Trains Logistic Regression, Decision Tree, and Random Forest using class_weight='balanced' to handle 97:3 class imbalance."),
-        ("8. Stratified Validation & Benchmarking", "Evaluates models on held-out test splits, prioritizing Recall (56.96%) and PR-AUC to choose the champion model."),
-        ("9. Production Inference Engine", "Provides real-time single-order simulation and batch CSV inference with propensity risk categorization."),
-        ("10. Prescriptive Commercial Strategy", "Directly binds ML output probabilities and RFM segments into automated CRM playbooks and marketing budget rules.")
-    ]
-
-    for title, text in stages:
-        st.markdown(f"""
-        <div class="dash-card" style="padding:12px 16px;margin-bottom:8px;">
-            <div style="font-weight:700;font-size:0.88rem;color:#0078d4;margin-bottom:2px;">{title}</div>
-            <div style="font-size:0.82rem;color:#475569;">{text}</div>
-        </div>""", unsafe_allow_html=True)
-
-
-# ══════════════════════════════════════════════════════════════════════════════
-# 9. ABOUT PROJECT
+# 8. ABOUT PROJECT
 # ══════════════════════════════════════════════════════════════════════════════
 elif page == "About Project":
-    st.markdown("### About the E-Commerce Customer Intelligence Platform")
-    st.markdown("<div style='font-size:0.84rem;color:#64748b;margin-bottom:12px;'>Project context, data provenance, and verified technology stack.</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class="breadcrumb-bar">
+        <span class="breadcrumb-path">System Information &nbsp;/&nbsp; Documentation</span>
+        <h2 class="page-main-heading">About the Project</h2>
+        <div class="page-main-sub">E-Commerce Customer Intelligence &amp; Purchase Prediction System</div>
+    </div>
+    """, unsafe_allow_html=True)
 
-    a1, a2 = st.columns([6, 4])
+    # ── Project Overview & Developer Card ─────────────────────────────────────
+    st.markdown("""
+    <div class="dash-card" style="padding: 16px 20px; margin-bottom: 14px; border-left: 4px solid #0078d4;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+            <div style="flex: 1; min-width: 280px;">
+                <div style="font-size: 0.72rem; font-weight: 700; color: #0078d4; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 3px;">About the Project</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: #0f172a; line-height: 1.25; margin-bottom: 6px;">E-Commerce Customer Intelligence &amp; Purchase Prediction System</div>
+                <div style="font-size: 0.84rem; color: #475569; line-height: 1.55;">
+                    <strong>Purpose:</strong> Analyze e-commerce customer behavior, segment customers using RFM analysis, predict repeat-purchase likelihood using machine learning, and translate analytical results into actionable business recommendations.
+                </div>
+            </div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 12px 18px; text-align: right; min-width: 200px;">
+                <div style="font-size: 0.68rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em;">Developed by</div>
+                <div style="font-size: 1.15rem; font-weight: 800; color: #0f172a; margin-top: 2px;">Amit Vats</div>
+                <div style="font-size: 0.72rem; color: #0078d4; font-weight: 600; margin-top: 2px;">Project Developer</div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    a1, a2 = st.columns([55, 45], gap="medium")
+
     with a1:
+        # Project Objective Card
         st.markdown("""
         <div class="dash-card">
-            <div class="dash-card-title">Project Objectives & Purpose</div>
-            <div style="font-size:0.84rem;color:#475569;line-height:1.6;">
-                The platform is designed to resolve modern e-commerce retention bottlenecks by unifying historical business intelligence with early machine learning prediction.<br><br>
-                &bull; <strong>Macro Intelligence</strong>: Real-time visibility into revenue seasonality, fulfillment SLAs, and spatial demand.<br>
-                &bull; <strong>Behavioral Segmentation</strong>: RFM scoring across 93k customers to protect high-value GMV.<br>
-                &bull; <strong>Early Repeat Purchase Prediction</strong>: Scoring incoming buyers on Order #1 to guide CRM intervention.
+            <div class="dash-card-title">Project Objective</div>
+            <div style="font-size: 0.84rem; color: #334155; line-height: 1.6; margin-top: 4px;">
+                Analyze customer behavior and predict repeat purchase likelihood to support customer retention and business decision-making.
             </div>
-        </div>""", unsafe_allow_html=True)
+        </div>
+        """, unsafe_allow_html=True)
 
+        # Dataset Card
         st.markdown("""
         <div class="dash-card">
-            <div class="dash-card-title">Dataset Provenance</div>
-            <div style="font-size:0.84rem;color:#475569;line-height:1.6;">
-                <strong>Dataset</strong>: Olist Brazilian E-Commerce Public Dataset<br>
-                <strong>Coverage</strong>: 2016 to 2018 transactions across commercial marketplaces in Brazil.<br>
-                <strong>Volume</strong>: 99,441 unique orders, 96,096 customers, and 3,095 sellers.
+            <div class="dash-card-title">Dataset</div>
+            <div style="font-size: 0.84rem; color: #334155; line-height: 1.6; margin-top: 4px;">
+                <strong>Olist Brazilian E-Commerce Dataset</strong><br>
+                Covers 99,441 unique orders, 96,096 customers, and 3,095 sellers across 27 Brazilian states from 2016 through 2018, providing commercial fulfillment lead times, payment methods, and customer review scores.
             </div>
-        </div>""", unsafe_allow_html=True)
+        </div>
+        """, unsafe_allow_html=True)
+
+        # Core Analytics Card
+        st.markdown("""
+        <div class="dash-card">
+            <div class="dash-card-title">Core Analytics</div>
+            <div style="font-size: 0.84rem; color: #334155; line-height: 1.7; margin-top: 6px;">
+                &bull; <strong>Exploratory Data Analysis</strong>: Macro revenue seasonality, regional demand concentration, and fulfillment SLA tracking.<br>
+                &bull; <strong>RFM Segmentation</strong>: Quintile-based Recency, Frequency, and Monetary behavioral customer lifecycle cohorts.<br>
+                &bull; <strong>Customer Intelligence</strong>: Individual customer lookup, transaction history, and real-time propensity profiling.<br>
+                &bull; <strong>Repeat Purchase Prediction</strong>: Anti-leakage inference model scoring customer return probability on Order #1.<br>
+                &bull; <strong>Model Evaluation</strong>: Comprehensive benchmark comparison (Logistic Regression, Decision Tree, Random Forest) with Recall &amp; ROC-AUC focus.<br>
+                &bull; <strong>Business Recommendations</strong>: Automated prescriptive playbooks aligning propensity tiers with targeted retention campaigns.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
     with a2:
+        # Technology Stack Card
         st.markdown("""
         <div class="dash-card">
             <div class="dash-card-title">Technology Stack</div>
-            <table style="width:100%;font-size:0.82rem;color:#334155;">
-                <tr><td style="padding:4px 0;font-weight:600;">Programming Language</td><td>Python 3</td></tr>
-                <tr><td style="padding:4px 0;font-weight:600;">Data Processing</td><td>Pandas, NumPy</td></tr>
-                <tr><td style="padding:4px 0;font-weight:600;">Machine Learning</td><td>Scikit-learn, Joblib</td></tr>
-                <tr><td style="padding:4px 0;font-weight:600;">Interactive Charts</td><td>Plotly Express, Graph Objects</td></tr>
-                <tr><td style="padding:4px 0;font-weight:600;">Web Application</td><td>Streamlit</td></tr>
-                <tr><td style="padding:4px 0;font-weight:600;">Design & CSS</td><td>Custom Enterprise CSS</td></tr>
+            <div style="font-size: 0.74rem; color: #64748b; margin-bottom: 8px;">Verified technologies actively utilized in the application:</div>
+            <table style="width:100%; font-size:0.82rem; color:#334155; border-collapse: collapse;">
+                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding:5px 0; font-weight:600;">Python</td><td>Core programming language</td></tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding:5px 0; font-weight:600;">Pandas</td><td>Data manipulation &amp; aggregation</td></tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding:5px 0; font-weight:600;">NumPy</td><td>Numerical array operations</td></tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding:5px 0; font-weight:600;">Scikit-learn</td><td>Machine learning models &amp; pipelines</td></tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding:5px 0; font-weight:600;">Streamlit</td><td>Web application runtime &amp; UI</td></tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding:5px 0; font-weight:600;">Matplotlib</td><td>Statistical plotting &amp; chart generation</td></tr>
+                <tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding:5px 0; font-weight:600;">Seaborn</td><td>Distribution &amp; correlation visualization</td></tr>
+                <tr><td style="padding:5px 0; font-weight:600;">Joblib</td><td>Model serialization &amp; fast persistence</td></tr>
             </table>
-        </div>""", unsafe_allow_html=True)
+        </div>
+        """, unsafe_allow_html=True)
+
+        # Visual Project Flow Card (Item 6)
+        st.markdown("""
+        <div class="dash-card">
+            <div class="dash-card-title">Project Workflow</div>
+            <div style="font-size: 0.74rem; color: #64748b; margin-bottom: 8px;">End-to-end analytical pipeline:</div>
+            <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.80rem; color: #0f172a;">
+                <div style="display:flex; align-items:center; gap:8px; background:#f8fafc; padding:4px 10px; border-radius:4px; border:1px solid #e2e8f0;">
+                    <span style="font-weight:700; color:#0078d4; width:16px;">1</span> <strong>Data</strong> <span style="color:#64748b; font-size:0.74rem;">(Raw Olist Relational Ingestion)</span>
+                </div>
+                <div style="text-align:center; color:#94a3b8; font-size:0.70rem; line-height:1;">&darr;</div>
+                <div style="display:flex; align-items:center; gap:8px; background:#f8fafc; padding:4px 10px; border-radius:4px; border:1px solid #e2e8f0;">
+                    <span style="font-weight:700; color:#0078d4; width:16px;">2</span> <strong>Cleaning</strong> <span style="color:#64748b; font-size:0.74rem;">(Type coercion, outlier bounds &amp; isolation)</span>
+                </div>
+                <div style="text-align:center; color:#94a3b8; font-size:0.70rem; line-height:1;">&darr;</div>
+                <div style="display:flex; align-items:center; gap:8px; background:#f8fafc; padding:4px 10px; border-radius:4px; border:1px solid #e2e8f0;">
+                    <span style="font-weight:700; color:#0078d4; width:16px;">3</span> <strong>EDA</strong> <span style="color:#64748b; font-size:0.74rem;">(Seasonality, regional demand &amp; review distributions)</span>
+                </div>
+                <div style="text-align:center; color:#94a3b8; font-size:0.70rem; line-height:1;">&darr;</div>
+                <div style="display:flex; align-items:center; gap:8px; background:#f8fafc; padding:4px 10px; border-radius:4px; border:1px solid #e2e8f0;">
+                    <span style="font-weight:700; color:#0078d4; width:16px;">4</span> <strong>RFM Segmentation</strong> <span style="color:#64748b; font-size:0.74rem;">(Quintile scoring &amp; lifecycle cohorts)</span>
+                </div>
+                <div style="text-align:center; color:#94a3b8; font-size:0.70rem; line-height:1;">&darr;</div>
+                <div style="display:flex; align-items:center; gap:8px; background:#f8fafc; padding:4px 10px; border-radius:4px; border:1px solid #e2e8f0;">
+                    <span style="font-weight:700; color:#0078d4; width:16px;">5</span> <strong>Feature Engineering</strong> <span style="color:#64748b; font-size:0.74rem;">(Anti-leakage Order #1 signal matrices)</span>
+                </div>
+                <div style="text-align:center; color:#94a3b8; font-size:0.70rem; line-height:1;">&darr;</div>
+                <div style="display:flex; align-items:center; gap:8px; background:#f8fafc; padding:4px 10px; border-radius:4px; border:1px solid #e2e8f0;">
+                    <span style="font-weight:700; color:#0078d4; width:16px;">6</span> <strong>Machine Learning</strong> <span style="color:#64748b; font-size:0.74rem;">(Class-balanced classifier benchmarking)</span>
+                </div>
+                <div style="text-align:center; color:#94a3b8; font-size:0.70rem; line-height:1;">&darr;</div>
+                <div style="display:flex; align-items:center; gap:8px; background:#f8fafc; padding:4px 10px; border-radius:4px; border:1px solid #e2e8f0;">
+                    <span style="font-weight:700; color:#0078d4; width:16px;">7</span> <strong>Prediction</strong> <span style="color:#64748b; font-size:0.74rem;">(Real-time simulation &amp; batch CSV scoring)</span>
+                </div>
+                <div style="text-align:center; color:#94a3b8; font-size:0.70rem; line-height:1;">&darr;</div>
+                <div style="display:flex; align-items:center; gap:8px; background:#f8fafc; padding:4px 10px; border-radius:4px; border:1px solid #e2e8f0;">
+                    <span style="font-weight:700; color:#0078d4; width:16px;">8</span> <strong>Business Recommendations</strong> <span style="color:#64748b; font-size:0.74rem;">(Prescriptive CRM retention playbooks)</span>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# 10. UPLOAD DATA & PREDICT
+# 9. UPLOAD DATA & PREDICT
 # ══════════════════════════════════════════════════════════════════════════════
-elif page == "Upload Data & Predict":
+elif page in ("Upload Data & Predict", "Upload & Predict"):
     model, _ = get_model()
 
     st.markdown("### Upload Dataset & Batch Prediction Engine")
